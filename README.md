@@ -1,9 +1,12 @@
-Rbac
-====
+# ZfrRbac
 
-[![Build Status](https://travis-ci.org/zf-fr/rbac.png)](https://travis-ci.org/zf-fr/rbac)
-[![Latest Stable Version](https://poser.pugx.org/zfr/rbac/v/stable.png)](https://packagist.org/packages/zfr/rbac)
-[![Total Downloads](https://poser.pugx.org/zfr/rbac/downloads.png)](https://packagist.org/packages/zfr/rbac)
+
+[![Build Status](https://github.com/lm-commons/LmcRbac/actions/workflows/build_test.yml/badge.svg)](https://github.com/lm-commons/LmcRbac/actions/workflows/build_test.yml)
+[![Latest Stable Version](https://poser.pugx.org/lm-commons/zfrrbac/v/stable.png)](https://packagist.org/packages/zfr/rbac)
+[![Total Downloads](https://poser.pugx.org/lm-commons/zfrrbac/downloads.png)](https://packagist.org/packages/zfr/rbac)
+
+**IMPORTANT** The only purpose of this package is to provide a version of zfr/rbac that
+support PHP 8 and fixes the deprecation notices.
 
 Rbac (not to be confused with ZfcRbac) is a pure PHP implementation of the RBAC (*Role based access control*)
 concept. Actually, it is a Zend Framework 3 prototype of the ZF2 Zend\Permissions\Rbac component.
