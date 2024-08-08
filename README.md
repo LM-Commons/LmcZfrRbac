@@ -5,7 +5,7 @@
 [![Latest Stable Version](https://poser.pugx.org/lm-commons/zfrrbac/v/stable.png)](https://packagist.org/packages/zfr/rbac)
 [![Total Downloads](https://poser.pugx.org/lm-commons/zfrrbac/downloads.png)](https://packagist.org/packages/zfr/rbac)
 
-**IMPORTANT** The only purpose of this package is to provide a version of zfr/rbac that
+**IMPORTANT** The only purpose of this package is to provide a version of zfr/rbac 1.2 that
 support PHP 8 and fixes the deprecation notices.
 
 Rbac (not to be confused with ZfcRbac) is a pure PHP implementation of the RBAC (*Role based access control*)
