@@ -13,13 +13,13 @@ use PHPUnit_Framework_TestCase as TestCase;
 use Rbac\Role\HierarchicalRole;
 
 /**
- * @covers Rbac\Role\HierarchicalRole
+ * @covers \Rbac\Role\HierarchicalRole
  * @group  Coverage
  */
 class HierarchicalRoleTest extends TestCase
 {
     /**
-     * @covers Rbac\Role\HierarchicalRole::addChild
+     * @covers \Rbac\Role\HierarchicalRole::addChild
      */
     public function testCanAddChild()
     {
@@ -32,7 +32,7 @@ class HierarchicalRoleTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Role\HierarchicalRole::hasChildren
+     * @covers \Rbac\Role\HierarchicalRole::hasChildren
      */
     public function testHasChildren()
     {
@@ -46,7 +46,7 @@ class HierarchicalRoleTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Role\HierarchicalRole::getChildren
+     * @covers \Rbac\Role\HierarchicalRole::getChildren
      */
     public function testCanGetChildren()
     {

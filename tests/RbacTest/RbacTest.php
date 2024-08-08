@@ -16,13 +16,13 @@ use Rbac\Role\Role;
 use Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy;
 
 /**
- * @covers Rbac\Rbac
+ * @covers \Rbac\Rbac
  * @group  Coverage
  */
 class RbacTest extends TestCase
 {
     /**
-     * @covers Rbac\Rbac::__construct
+     * @covers \Rbac\Rbac::__construct
      */
     public function testConstructorAcceptCustomTraversalStrategy()
     {
@@ -33,7 +33,7 @@ class RbacTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Rbac::isGranted
+     * @covers \Rbac\Rbac::isGranted
      */
     public function testInjectSingleRoleToArray()
     {
@@ -51,7 +51,7 @@ class RbacTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Rbac::isGranted
+     * @covers \Rbac\Rbac::isGranted
      */
     public function testFetchIteratorFromTraversalStrategy()
     {
@@ -66,7 +66,7 @@ class RbacTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Rbac::isGranted
+     * @covers \Rbac\Rbac::isGranted
      */
     public function testTraverseRoles()
     {
@@ -83,7 +83,7 @@ class RbacTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Rbac::isGranted
+     * @covers \Rbac\Rbac::isGranted
      */
     public function testReturnTrueWhenRoleHasPermission()
     {

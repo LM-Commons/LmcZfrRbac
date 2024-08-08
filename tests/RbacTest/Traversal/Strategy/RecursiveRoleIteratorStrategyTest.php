@@ -14,13 +14,13 @@ use Rbac\Role\Role;
 use Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy;
 
 /**
- * @covers Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy
+ * @covers \Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy
  * @group  Coverage
  */
 class RecursiveRoleIteratorStrategyTest extends TestCase
 {
     /**
-     * @covers Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy::getRolesIterator
+     * @covers \Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy::getRolesIterator
      */
     public function testGetIterator()
     {

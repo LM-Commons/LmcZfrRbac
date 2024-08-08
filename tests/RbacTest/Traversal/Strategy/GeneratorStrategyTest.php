@@ -22,7 +22,7 @@ use Rbac\Traversal\Strategy\GeneratorStrategy;
 class GeneratorStrategyTest extends TestCase
 {
     /**
-     * @covers Rbac\Traversal\Strategy\GeneratorStrategy::getRolesIterator
+     * @covers \Rbac\Traversal\Strategy\GeneratorStrategy::getRolesIterator
      */
     public function testTraverseFlatRoles()
     {
@@ -36,7 +36,7 @@ class GeneratorStrategyTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Traversal\Strategy\GeneratorStrategy::getRolesIterator
+     * @covers \Rbac\Traversal\Strategy\GeneratorStrategy::getRolesIterator
      */
     public function testTraverseHierarchicalRoles()
     {

@@ -17,13 +17,13 @@ use Rbac\Traversal\RecursiveRoleIterator;
 use stdClass;
 
 /**
- * @covers Rbac\Traversal\RecursiveRoleIterator
+ * @covers \Rbac\Traversal\RecursiveRoleIterator
  * @group  Coverage
  */
 class RecursiveRoleIteratorTest extends TestCase
 {
     /**
-     * @covers Rbac\Traversal\RecursiveRoleIterator::__construct
+     * @covers \Rbac\Traversal\RecursiveRoleIterator::__construct
      */
     public function testAcceptTraversable()
     {
@@ -34,7 +34,7 @@ class RecursiveRoleIteratorTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Traversal\RecursiveRoleIterator::valid
+     * @covers \Rbac\Traversal\RecursiveRoleIterator::valid
      */
     public function testValidateRoleInterface()
     {
@@ -51,7 +51,7 @@ class RecursiveRoleIteratorTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Traversal\RecursiveRoleIterator::hasChildren
+     * @covers \Rbac\Traversal\RecursiveRoleIterator::hasChildren
      */
     public function testHasChildrenReturnsFalseIfCurrentRoleIsNotHierarchical()
     {
@@ -63,7 +63,7 @@ class RecursiveRoleIteratorTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Traversal\RecursiveRoleIterator::hasChildren
+     * @covers \Rbac\Traversal\RecursiveRoleIterator::hasChildren
      */
     public function testHasChildrenReturnsFalseIfCurrentRoleHasNotChildren()
     {
@@ -76,7 +76,7 @@ class RecursiveRoleIteratorTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Traversal\RecursiveRoleIterator::hasChildren
+     * @covers \Rbac\Traversal\RecursiveRoleIterator::hasChildren
      */
     public function testHasChildrenReturnsTrueIfCurrentRoleHasChildren()
     {
@@ -89,7 +89,7 @@ class RecursiveRoleIteratorTest extends TestCase
     }
 
     /**
-     * @covers Rbac\Traversal\RecursiveRoleIterator::getChildren
+     * @covers \Rbac\Traversal\RecursiveRoleIterator::getChildren
      */
     public function testGetChildrenReturnsAnRecursiveRoleIteratorOfRoleChildren()
     {

@@ -25,7 +25,7 @@ class RoleTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers Rbac\Role\Role::addPermission
+     * @covers \Rbac\Role\Role::addPermission
      */
     public function testRoleCanAddPermission()
     {
