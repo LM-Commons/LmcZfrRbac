@@ -40,8 +40,8 @@
             "@cs",
             "@test"
         ],
-        "cs": "php-cs-fixer fix -v --diff --dry-run",
-        "cs-fix": "php-cs-fixer fix -v --diff",
+        "cs": "phpcs -n --standard=PSR2 ./src/",
+        "cs-fix": "phpcbf ./src/",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "test-coverage-html": "phpunit --colors=always --coverage-html ./build/html"

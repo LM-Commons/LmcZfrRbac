@@ -9,18 +9,13 @@
 
 namespace RbacTest;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Rbac\Role\HierarchicalRole;
 
-/**
- * @covers \Rbac\Role\HierarchicalRole
- * @group  Coverage
- */
+#[CoversClass('\Rbac\Role\HierarchicalRole')]
 class HierarchicalRoleTest extends TestCase
 {
-    /**
-     * @covers \Rbac\Role\HierarchicalRole::addChild
-     */
     public function testCanAddChild()
     {
         $role  = new HierarchicalRole('role');
@@ -31,9 +26,6 @@ class HierarchicalRoleTest extends TestCase
         $this->assertCount(1, $role->getChildren());
     }
 
-    /**
-     * @covers \Rbac\Role\HierarchicalRole::hasChildren
-     */
     public function testHasChildren()
     {
         $role = new HierarchicalRole('role');
@@ -45,9 +37,6 @@ class HierarchicalRoleTest extends TestCase
         $this->assertTrue($role->hasChildren());
     }
 
-    /**
-     * @covers \Rbac\Role\HierarchicalRole::getChildren
-     */
     public function testCanGetChildren()
     {
         $role   = new HierarchicalRole('role');

@@ -10,21 +10,16 @@
 namespace RbacTest\Traversal;
 
 use ArrayIterator;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Rbac\Role\HierarchicalRole;
 use Rbac\Role\Role;
 use Rbac\Traversal\RecursiveRoleIterator;
 use stdClass;
 
-/**
- * @covers \Rbac\Traversal\RecursiveRoleIterator
- * @group  Coverage
- */
+#[CoversClass('\Rbac\Traversal\RecursiveRoleIterator')]
 class RecursiveRoleIteratorTest extends TestCase
 {
-    /**
-     * @covers \Rbac\Traversal\RecursiveRoleIterator::__construct
-     */
     public function testAcceptTraversable()
     {
         $roles    = new ArrayIterator([new Role('foo'), new Role('bar')]);
@@ -33,9 +28,6 @@ class RecursiveRoleIteratorTest extends TestCase
         $this->assertEquals($iterator->getArrayCopy(), $roles->getArrayCopy());
     }
 
-    /**
-     * @covers \Rbac\Traversal\RecursiveRoleIterator::valid
-     */
     public function testValidateRoleInterface()
     {
         $foo      = new Role('Foo');
@@ -50,9 +42,6 @@ class RecursiveRoleIteratorTest extends TestCase
         $this->assertFalse($iterator->valid());
     }
 
-    /**
-     * @covers \Rbac\Traversal\RecursiveRoleIterator::hasChildren
-     */
     public function testHasChildrenReturnsFalseIfCurrentRoleIsNotHierarchical()
     {
         $foo      = new Role('Foo');
@@ -62,9 +51,6 @@ class RecursiveRoleIteratorTest extends TestCase
         $this->assertFalse($iterator->hasChildren());
     }
 
-    /**
-     * @covers \Rbac\Traversal\RecursiveRoleIterator::hasChildren
-     */
     public function testHasChildrenReturnsFalseIfCurrentRoleHasNotChildren()
     {
         $role     = $this->createMock('Rbac\Role\HierarchicalRoleInterface');
@@ -75,9 +61,6 @@ class RecursiveRoleIteratorTest extends TestCase
         $this->assertFalse($iterator->hasChildren());
     }
 
-    /**
-     * @covers \Rbac\Traversal\RecursiveRoleIterator::hasChildren
-     */
     public function testHasChildrenReturnsTrueIfCurrentRoleHasChildren()
     {
         $role     = $this->createMock('Rbac\Role\HierarchicalRoleInterface');
@@ -88,9 +71,6 @@ class RecursiveRoleIteratorTest extends TestCase
         $this->assertTrue($iterator->hasChildren());
     }
 
-    /**
-     * @covers \Rbac\Traversal\RecursiveRoleIterator::getChildren
-     */
     public function testGetChildrenReturnsAnRecursiveRoleIteratorOfRoleChildren()
     {
         $baz = new HierarchicalRole('Baz');

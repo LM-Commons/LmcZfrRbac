@@ -9,19 +9,14 @@
 
 namespace RbacTest\Traversal\Strategy;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Rbac\Role\Role;
 use Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy;
 
-/**
- * @covers \Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy
- * @group  Coverage
- */
+#[CoversClass('\Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy')]
 class RecursiveRoleIteratorStrategyTest extends TestCase
 {
-    /**
-     * @covers \Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy::getRolesIterator
-     */
     public function testGetIterator()
     {
         $strategy      = new RecursiveRoleIteratorStrategy;

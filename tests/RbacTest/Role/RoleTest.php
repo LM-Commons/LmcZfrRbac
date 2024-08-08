@@ -10,13 +10,11 @@
 
 namespace RbacTest;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Rbac\Role\Role;
 
-/**
- * @covers \Rbac\Role\Role
- * @group Coverage
- */
+#[CoversClass('\Rbac\Role\Role')]
 class RoleTest extends TestCase
 {
     public function testSetNameByConstructor()
@@ -25,9 +23,6 @@ class RoleTest extends TestCase
         $this->assertEquals('phpIsHell', $role->getName());
     }
 
-    /**
-     * @covers \Rbac\Role\Role::addPermission
-     */
     public function testRoleCanAddPermission()
     {
         $role = new Role('php');
@@ -36,7 +31,7 @@ class RoleTest extends TestCase
         $this->assertTrue($role->hasPermission('debug'));
 
         $permission = $this->createMock('Rbac\Permission\PermissionInterface');
-        $permission->expects($this->once())->method('__toString')->will($this->returnValue('interface'));
+        $permission->expects($this->once())->method('__toString')->willReturn('interface');
         $role->addPermission($permission);
 
         $this->assertTrue($role->hasPermission('interface'));

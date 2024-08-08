@@ -9,20 +9,15 @@
 
 namespace RbacTest\Traversal\Strategy;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Rbac\Role\HierarchicalRole;
 use Rbac\Role\Role;
 use Rbac\Traversal\Strategy\GeneratorStrategy;
 
-/**
- * @covers   \Rbac\Traversal\Strategy\GeneratorStrategy
- * @group    Coverage
- */
+#[CoversClass('\Rbac\Traversal\Strategy\GeneratorStrategy')]
 class GeneratorStrategyTest extends TestCase
 {
-    /**
-     * @covers \Rbac\Traversal\Strategy\GeneratorStrategy::getRolesIterator
-     */
     public function testTraverseFlatRoles()
     {
         $strategy = new GeneratorStrategy;
@@ -34,9 +29,6 @@ class GeneratorStrategyTest extends TestCase
         );
     }
 
-    /**
-     * @covers \Rbac\Traversal\Strategy\GeneratorStrategy::getRolesIterator
-     */
     public function testTraverseHierarchicalRoles()
     {
         $strategy = new GeneratorStrategy;

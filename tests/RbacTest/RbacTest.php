@@ -10,20 +10,15 @@
 namespace RbacTest;
 
 use ArrayIterator;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Rbac\Rbac;
 use Rbac\Role\Role;
 use Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy;
 
-/**
- * @covers \Rbac\Rbac
- * @group  Coverage
- */
+#[CoversClass('\Rbac\Rbac')]
 class RbacTest extends TestCase
 {
-    /**
-     * @covers \Rbac\Rbac::__construct
-     */
     /*
     public function testConstructorAcceptCustomTraversalStrategy()
     {
@@ -34,9 +29,6 @@ class RbacTest extends TestCase
     }
     */
 
-    /**
-     * @covers \Rbac\Rbac::isGranted
-     */
     public function testInjectSingleRoleToArray()
     {
         $role = new Role('Foo');
@@ -45,31 +37,25 @@ class RbacTest extends TestCase
         $traversalStrategy->expects($this->once())
             ->method('getRolesIterator')
             ->with($this->equalTo([$role]))
-            ->will($this->returnValue(new ArrayIterator([])));
+            ->willReturn(new ArrayIterator([]));
 
         $rbac = new Rbac($traversalStrategy);
 
         $rbac->isGranted($role, 'permission');
     }
 
-    /**
-     * @covers \Rbac\Rbac::isGranted
-     */
     public function testFetchIteratorFromTraversalStrategy()
     {
         $traversalStrategy = $this->createMock('Rbac\Traversal\Strategy\TraversalStrategyInterface');
         $traversalStrategy->expects($this->once())
             ->method('getRolesIterator')
-            ->will($this->returnValue(new ArrayIterator([])));
+            ->willReturn(new ArrayIterator([]));
 
         $rbac = new Rbac($traversalStrategy);
 
         $rbac->isGranted([], 'permission');
     }
 
-    /**
-     * @covers \Rbac\Rbac::isGranted
-     */
     public function testTraverseRoles()
     {
         $role = $this->createMock('Rbac\Role\RoleInterface');
@@ -82,16 +68,13 @@ class RbacTest extends TestCase
         $rbac->isGranted($roles, 'permission');
     }
 
-    /**
-     * @covers \Rbac\Rbac::isGranted
-     */
     public function testReturnTrueWhenRoleHasPermission()
     {
         $grantedRole = $this->createMock('Rbac\Role\RoleInterface');
         $grantedRole->expects($this->once())
             ->method('hasPermission')
             ->with('permission')
-            ->will($this->returnValue(true));
+            ->willReturn(true);
 
         $nextRole = $this->createMock('Rbac\Role\RoleInterface');
         $nextRole->expects($this->never())->method('hasPermission');
