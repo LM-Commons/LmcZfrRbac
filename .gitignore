@@ -1,0 +1,9 @@
+._*
+.~lock.*
+data/
+vendor/
+build/
+composer.lock
+composer.phar
+.idea
+.phpunit.result.cache
