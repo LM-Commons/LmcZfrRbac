@@ -22,7 +22,7 @@ class RecursiveRoleIteratorStrategy implements TraversalStrategyInterface
      * @param  RoleInterface[]           $roles
      * @return RecursiveIteratorIterator
      */
-    public function getRolesIterator($roles): RecursiveIteratorIterator
+    public function getRolesIterator($roles)
     {
         return new RecursiveIteratorIterator(
             new RecursiveRoleIterator($roles),

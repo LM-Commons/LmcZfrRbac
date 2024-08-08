@@ -18,19 +18,19 @@ class Role implements RoleInterface
     /**
      * @var string
      */
-    protected string $name;
+    protected $name;
 
     /**
      * @var string[]
      */
-    protected array $permissions = [];
+    protected $permissions = [];
 
     /**
      * Constructor
      *
      * @param string $name
      */
-    public function __construct(string $name)
+    public function __construct($name)
     {
         $this->name = (string) $name;
     }
@@ -38,7 +38,7 @@ class Role implements RoleInterface
     /**
      * {@inheritDoc}
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -48,7 +48,7 @@ class Role implements RoleInterface
      *
      * @param string $permission
      */
-    public function addPermission(string $permission): void
+    public function addPermission($permission)
     {
         $this->permissions[(string) $permission] = $permission;
     }
@@ -56,10 +56,10 @@ class Role implements RoleInterface
     /**
      * Checks if a permission exists for this role
      *
-     * @param mixed $permission
+     * @param  string $permission
      * @return bool
      */
-    public function hasPermission(mixed $permission): bool
+    public function hasPermission($permission)
     {
         return isset($this->permissions[(string) $permission]);
     }

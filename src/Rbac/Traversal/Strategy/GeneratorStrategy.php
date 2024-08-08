@@ -24,7 +24,7 @@ class GeneratorStrategy implements TraversalStrategyInterface
      * @param  RoleInterface[]|Traversable $roles
      * @return Generator
      */
-    public function getRolesIterator($roles): Generator
+    public function getRolesIterator($roles)
     {
         foreach ($roles as $role) {
             yield $role;
