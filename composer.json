@@ -1,11 +1,12 @@
 {
     "name": "lm-commons/lmc-zfr-rbac",
-    "description": "Clone of zfr/rbac v1.2",
+    "description": "Clone of zfr/rbac v1.2.0 for PHP 8 support",
     "type": "library",
     "license": "MIT",
     "keywords": [
         "zf2",
         "zf3",
+        "laminas",
         "rbac",
         "security"
     ],
