@@ -23,12 +23,12 @@ interface HierarchicalRoleInterface extends RoleInterface
      *
      * @return bool
      */
-    public function hasChildren();
+    public function hasChildren(): bool;
 
     /**
      * Get child roles
      *
      * @return array|RoleInterface[]|Traversable
      */
-    public function getChildren();
+    public function getChildren(): array|Traversable;
 }

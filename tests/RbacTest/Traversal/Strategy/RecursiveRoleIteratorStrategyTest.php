@@ -9,7 +9,7 @@
 
 namespace RbacTest\Traversal\Strategy;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 use Rbac\Role\Role;
 use Rbac\Traversal\Strategy\RecursiveRoleIteratorStrategy;
 

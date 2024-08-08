@@ -9,6 +9,8 @@
 
 namespace Rbac\Role;
 
+use Traversable;
+
 /**
  * Simple implementation for a hierarchical role
  */
@@ -17,12 +19,12 @@ class HierarchicalRole extends Role implements HierarchicalRoleInterface
     /**
      * @var array|RoleInterface[]
      */
-    protected $children = [];
+    protected array $children = [];
 
     /**
      * {@inheritDoc}
      */
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return !empty($this->children);
     }
@@ -30,7 +32,7 @@ class HierarchicalRole extends Role implements HierarchicalRoleInterface
     /**
      * {@inheritDoc}
      */
-    public function getChildren()
+    public function getChildren(): Traversable|array
     {
         return $this->children;
     }
@@ -40,7 +42,7 @@ class HierarchicalRole extends Role implements HierarchicalRoleInterface
      *
      * @param RoleInterface $child
      */
-    public function addChild(RoleInterface $child)
+    public function addChild(RoleInterface $child): void
     {
         $this->children[$child->getName()] = $child;
     }

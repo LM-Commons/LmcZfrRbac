@@ -10,7 +10,7 @@
 namespace RbacTest\Traversal;
 
 use ArrayIterator;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 use Rbac\Role\HierarchicalRole;
 use Rbac\Role\Role;
 use Rbac\Traversal\RecursiveRoleIterator;
@@ -67,10 +67,10 @@ class RecursiveRoleIteratorTest extends TestCase
      */
     public function testHasChildrenReturnsFalseIfCurrentRoleHasNotChildren()
     {
-        $role     = $this->getMock('Rbac\Role\HierarchicalRoleInterface');
+        $role     = $this->createMock('Rbac\Role\HierarchicalRoleInterface');
         $iterator = new RecursiveRoleIterator([$role]);
 
-        $role->expects($this->once())->method('hasChildren')->will($this->returnValue(false));
+        $role->expects($this->once())->method('hasChildren')->willReturn(false);
 
         $this->assertFalse($iterator->hasChildren());
     }
@@ -80,10 +80,10 @@ class RecursiveRoleIteratorTest extends TestCase
      */
     public function testHasChildrenReturnsTrueIfCurrentRoleHasChildren()
     {
-        $role     = $this->getMock('Rbac\Role\HierarchicalRoleInterface');
+        $role     = $this->createMock('Rbac\Role\HierarchicalRoleInterface');
         $iterator = new RecursiveRoleIterator([$role]);
 
-        $role->expects($this->once())->method('hasChildren')->will($this->returnValue(true));
+        $role->expects($this->once())->method('hasChildren')->willReturn(true);
 
         $this->assertTrue($iterator->hasChildren());
     }
