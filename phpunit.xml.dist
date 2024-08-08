@@ -4,9 +4,6 @@
         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
         bootstrap="./tests/Bootstrap.php"
         colors="true"
-        stopOnFailure="false"
-        processIsolation="false"
-        backupGlobals="false"
         displayDetailsOnTestsThatTriggerDeprecations="true"
 >
     <testsuite name="ZfrRbac tests">
@@ -15,7 +12,7 @@
     <logging/>
     <source>
         <include>
-            <directory suffix=".php">./src</directory>
+            <directory>./src</directory>
         </include>
     </source>
 </phpunit>
