@@ -21,7 +21,7 @@ interface RoleInterface
      *
      * @return string
      */
-    public function getName(): string;
+    public function getName();
 
     /**
      * Checks if a permission exists for this role (it does not check child roles)
@@ -29,5 +29,5 @@ interface RoleInterface
      * @param  mixed $permission
      * @return bool
      */
-    public function hasPermission(mixed $permission): bool;
+    public function hasPermission($permission);
 }
