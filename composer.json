@@ -35,6 +35,9 @@
             "Rbac\\": "src/Rbac"
         }
     },
+    "replace": {
+        "zfr/rbac": "1.2.0"
+    },
     "scripts": {
         "check": [
             "@cs",
