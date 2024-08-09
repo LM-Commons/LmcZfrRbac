@@ -1,14 +1,14 @@
-# ZfrRbac
+# Rbac
 
 
-[![Build Status](https://github.com/lm-commons/LmcRbac/actions/workflows/build_test.yml/badge.svg)](https://github.com/lm-commons/LmcRbac/actions/workflows/build_test.yml)
-[![Latest Stable Version](http://poser.pugx.org/lm-commons/lmc-zfr-rbac/v)](https://packagist.org/packages/lm-commons/lmc-zfr-rbac)
-[![Total Downloads](http://poser.pugx.org/lm-commons/lmc-zfr-rbac/downloads)](https://packagist.org/packages/lm-commons/lmc-zfr-rbac)
-[![License](http://poser.pugx.org/lm-commons/lmc-zfr-rbac/license)](https://packagist.org/packages/lm-commons/lmc-zfr-rbac)
-[![Coverage Status](https://coveralls.io/repos/github/LM-Commons/LmcZfrRbac/badge.svg?branch=1.x)](https://coveralls.io/github/LM-Commons/LmcZfrRbac?branch=1.x)
+[![Build Status](https://github.com/lm-commons/rbac/actions/workflows/build_test.yml/badge.svg)](https://github.com/lm-commons/rbac/actions/workflows/build_test.yml)
+[![Latest Stable Version](http://poser.pugx.org/lm-commons/rbac/v)](https://packagist.org/packages/lm-commons/rbac)
+[![Total Downloads](http://poser.pugx.org/lm-commons/rbac/downloads)](https://packagist.org/packages/lm-commons/rbac)
+[![License](http://poser.pugx.org/lm-commons/rbac/license)](https://packagist.org/packages/lm-commons/rbac)
+[![Coverage Status](https://coveralls.io/repos/github/LM-Commons/rbac/badge.svg?branch=1.x)](https://coveralls.io/github/LM-Commons/rbac?branch=1.x)
 [![Static Badge](https://img.shields.io/badge/Chat_on-Slack-blue)](https://join.slack.com/t/lm-commons/shared_invite/zt-2gankt2wj-FTS45hp1W~JEj1tWvDsUHQ)
 
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Flm-commons%2Flmczfrrbac%2Fproperties%2Fvalues&query=%24%5B%3A1%5D.value&label=Maintenance%20Status)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Flm-commons%2Frbac%2Fproperties%2Fvalues&query=%24%5B%3A1%5D.value&label=Maintenance%20Status)
 
 ### **IMPORTANT!!** 
 ### The only purpose of this package is to provide a version of zfr/rbac 1.2 that support PHP 8 and fixes the deprecation notices.
