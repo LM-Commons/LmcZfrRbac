@@ -1,5 +1,5 @@
 {
-    "name": "lm-commons/lmc-zfr-rbac",
+    "name": "lm-commons/rbac",
     "description": "Clone of zfr/rbac v1.2.0 for PHP 8 support",
     "type": "library",
     "license": "MIT",
@@ -10,7 +10,7 @@
         "rbac",
         "security"
     ],
-    "homepage": "https://github.com/lm-commons/LmcZfrRbac",
+    "homepage": "https://github.com/lm-commons/rbac",
     "authors": [
         {
             "name": "Michaël Gallego",
